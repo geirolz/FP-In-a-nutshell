@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="keywords" content="remark,remarkjs,markdown,slideshow,presentation" />
+    <meta name="description" content="A simple, in-browser, markdown-driven slideshow tool." />
+    <title>Remark</title>
+    <link rel="stylesheet" href="resources/style.css">
+
+    <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $.when(loads([
+            "README.md"
+        ])).then(function(data){
+            $("#source").html(data).show();
+            remark.create({
+                highlightStyle: 'monokai',
+                highlightLanguage: 'remark',
+                highlightLines: true
+            });
+        });
+
+        function loads(paths, status = "") {
+            let deferred = $.Deferred();
+
+            if(paths.length <= 0) {
+                deferred.resolve("");
+            } else {
+                $.get(paths[0], function (data) {
+                    let hasNext = paths.length > 1;
+                    let end = hasNext ? "\n---\n" : "";
+                    let newStatus = status + data + end;
+
+                    if (hasNext) {
+                        return deferred.resolve(loads(paths.splice(1), newStatus));
+                    } else {
+                        return deferred.resolve(newStatus);
+                    }
+                }, "html");
+            }
+            return deferred.promise();
+        }
+    </script>
+</head>
+<body>
+<textarea style="display: none" id="source"></textarea>
+</body>
+</html>
