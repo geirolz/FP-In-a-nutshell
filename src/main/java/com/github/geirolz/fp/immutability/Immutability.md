@@ -31,7 +31,7 @@ Immutability in Java consist in:
 ```
 
 ---
-## Cool! But if i need to mute state ?
+## Cool! But if i need to mute states ?
 
 Don't mute already existing instance, **create a new one**.
 

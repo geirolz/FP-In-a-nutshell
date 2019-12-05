@@ -29,8 +29,10 @@ Referring to previously example, here we have a function from `Integer` to `Stri
     }
 ```
 
-We can even think methods as function. This method accept an `Integer` and returns a `String` exactly like out function above.  
+We can even think methods as function. 
+This method accept an `Integer` and returns a `String` exactly like our function above, so this method can be written as function.  
 ```java
+    //Integer -> String    
     public String intToStr(Integer value){
         return value.toString();
     }
