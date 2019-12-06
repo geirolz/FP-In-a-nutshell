@@ -14,7 +14,8 @@
         $.when(loads([
             "README.md",
             srcPath + "/immutability/Immutability.md",
-            srcPath + "/functions/Functions.md"
+            srcPath + "/functions/Functions.md",
+            srcPath + "/functions/FunctionsComposability.md"
         ])).then(function(data){
             $("#source").html(data).show();
             remark.create({

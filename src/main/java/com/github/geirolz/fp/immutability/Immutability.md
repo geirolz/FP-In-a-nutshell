@@ -4,7 +4,12 @@ Immutability is one of the most important things in functional programming.
 <div class="notebox">Once a stateful instance is created no one can mute his state</div>
  
 #### Advantages
-- Thread safe operation. 
+- Thread safety
+- Atomicity of failure
+- Absence of hidden side-effects
+
+
+https://www.leadingagile.com/2018/03/immutability-in-java/
 
 ---
 #### Immutability in java
@@ -37,6 +42,18 @@ Don't mute already existing instance, **create a new one**.
 
 Copy all fields and change only what you need to mute.
 
+##### Mutable style
+```java
+    Person renato = new Person("Renato", 100);
+    Person andrea = new Person("Andrea", 100);
+
+    //Renato earn 100€, renato has 200€
+    renato.setMoney(renato.getMoney() + 100);
+    
+    //Andrea lose 100€, andrea has 0€
+    andrea.setMonet(andrea.getMoney() - 100);     
+```
+
 ##### Immutable style
 ```java
     Person renato = new Person("Renato", 100);
@@ -48,16 +65,4 @@ Copy all fields and change only what you need to mute.
     //Andrea lose 100€, andrea has 0€
     Person poorAndrea = new Person(andrea.getName(), andrea.getMoney() - 100);
      
-```
-
-##### Mutable style
-```java
-    Person renato = new Person("Renato", 100);
-    Person andrea = new Person("Andrea", 100);
-
-    //Renato earn 100€, renato has 200€
-    renato.setMoney(renato.getMoney() + 100);
-    
-    //Andrea lose 100€, andrea has 0€
-    andrea.setMonet(andrea.getMoney() - 100);     
 ```
