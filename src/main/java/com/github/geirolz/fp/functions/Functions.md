@@ -1,7 +1,7 @@
 # Function
 A Function is an abstraction to **map**(convert) a value from a **domain** to another **domain**(codomain).
 
-![Drag Racing](src/main/resources/imgs/function_draw.png)
+<img class="centered" src="src/main/resources/imgs/function.svg" />
 
 In the figure we have **Integer** as domain and **String** as codomain, so we have a function from **Integer** to **String** 
 and we can write it as `Integer -> String`.
