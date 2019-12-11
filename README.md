@@ -1,5 +1,4 @@
 # FP in a nutshell
-Functional Programming principles in a nutshell
 
 ## Programming paradigms
 > *A programming paradigm is an approach to programming a computer based on a mathematical theory or 
@@ -12,10 +11,14 @@ It defines:
     * structure: what parts
     * behaviour: how parts compute
     * interaction: how parts interact
-    
+
+---
+
 <div class="centered">
     <img src="https://www.researchgate.net/profile/Peter_Van_Roy/publication/241111987/figure/fig1/AS:298670202343424@1448219933039/Languages-paradigms-and-concepts.png" />
 </div>
+
+---
 
 ### Examples
 Some programming paradigms:
@@ -32,6 +35,8 @@ No one paradigm solves all problems in the easiest or most efficient way.
 * Oz: LP + FP
 ...
 
+---
+
 ## Functional programming
 
 ### Historical notions
@@ -47,6 +52,8 @@ and application using variable binding and substitution.
     <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Greek_lc_lamda_thin.svg" />
 </div>
 
+---
+
 ### Another mathematical useful concept
 Category Theory introduced in 1942-1945 by Samuel Eilenberg and Saunders Mac Lane.
 
@@ -59,6 +66,8 @@ More and more neatly...
 </div>
 
 **It found a practical application in programming language theory, especially in functional programming languages.**
+
+---
 
 ### Main characteristics
 > *Programming in a functional language consists of building definitions and using the computer to evaluate expressions.
