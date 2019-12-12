@@ -1,15 +1,12 @@
 # Immutability
-Immutability is one of the most important things in functional programming.
+Immutability is one of the most important concept in functional programming.
 
-<div class="notebox">Once a stateful instance is created no one can mute his state</div>
+>*Once a stateful instance is created no one can mute his state*
  
 #### Advantages
 - Thread safety
 - Atomicity of failure
 - Absence of hidden side-effects
-
-
-https://www.leadingagile.com/2018/03/immutability-in-java/
 
 ---
 #### Immutability in java
