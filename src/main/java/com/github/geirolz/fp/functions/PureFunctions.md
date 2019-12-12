@@ -30,3 +30,22 @@ foo(1) //false
 This interaction with the outside world won’t occur in the middle of a computation, but only when you finish the computation.
 
 In other words, side effects will be delayed and applied separately.
+
+---
+## Exercise
+
+Take a look at package `com.github.geirolz.fp.finalex.exercise`.
+
+* Launch the test and fix the code, if necessary;
+* Change `Customer.findOrderById()` method in order to use fp principles.
+* Change `Item.totalItem()` method in order to use fp principles.
+* Change `Order.totalOrder()` method in order to use fp principles.
+* Test must be green!
+
+Hints:
+* Use `stream()`, `filter()`, `findFirst()`, `Optional<>`, `orElse()`, `map()` and `reduce()`.
+* https://www.mkyong.com/java8/java-8-streams-filter-examples/
+* https://www.mkyong.com/java8/java-8-optional-in-depth/
+* https://www.mkyong.com/java8/java-8-streams-map-examples/
+* https://www.programcreek.com/2014/01/reduce-stream-examples/
+
