@@ -3,10 +3,7 @@ Immutability is one of the most important concept in functional programming.
 
 >*Once a stateful instance is created no one can mute his state*
  
-#### Advantages
-- Thread safety
-- Atomicity of failure
-- Absence of hidden side-effects
+Main advantage of immutability is **Thread Safety**
 
 ---
 #### Immutability in java
