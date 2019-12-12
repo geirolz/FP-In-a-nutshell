@@ -66,3 +66,36 @@ Copy all fields and change only what you need to mute.
     Person poorAndrea = new Person(andrea.getName(), andrea.getMoney() - 100);
      
 ```
+
+---
+#### Another typical example
+
+How to count a list size without using mutable state? Using recursion! 
+
+**Scala** examples, because **Java** doesn't support tail recursion.
+
+```scala
+def size(list: Seq[Int]): Int =
+    list match {
+      case Nil => 0 // if list.isEmpty()
+      case el :: tail => size(tail) + 1 // otherwise
+    }
+```
+
+or better ....
+
+```scala
+  def sizeTailRec(listIn: Seq[Int]): Int = {
+    def sizeAcc(list: Seq[Int], acc: Int): Int =
+      list match {
+        case Nil => acc // if list.isEmpty()
+        case el :: tail => sizeAcc(tail, 1+acc) // otherwise
+      }
+
+    sizeAcc(listIn, 0)
+  }
+```
+
+if you try with `List.range(1, 100000)`:
+* with the 1st example -> `java.lang.StackOverflowError`.
+* with the 2nd example it works fine. It uses the **tail recursion**.
