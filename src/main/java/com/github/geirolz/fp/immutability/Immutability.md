@@ -70,7 +70,19 @@ Copy all fields and change only what you need to mute.
 ---
 #### Another typical example
 
-How to count a list size without using mutable state? Using recursion! 
+```java
+Integer size(List<Integer> list) {
+    Integer res = 0;
+    for(Integer num: list){
+        res++;
+    }   
+    return res;
+}
+```
+How to count a list size without using mutable state? 
+
+---
+#### Using recursion! 
 
 **Scala** examples, because **Java** doesn't support tail recursion.
 

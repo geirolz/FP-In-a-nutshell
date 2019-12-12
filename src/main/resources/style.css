@@ -9,9 +9,10 @@ h1, h2, h3 {
     font-weight: 400;
     margin-bottom: 0;
 }
-.remark-slide-content h1 { font-size: 3em; }
-.remark-slide-content h2 { font-size: 2em; }
-.remark-slide-content h3 { font-size: 1.6em; }
+.remark-slide-content h1 { font-size: 50px; }
+.remark-slide-content h2 { font-size: 35px; }
+.remark-slide-content h3 { font-size: 30px; }
+.remark-slide-content { font-size: 20px;}
 .footnote {
     position: absolute;
     bottom: 3em;
@@ -106,17 +107,21 @@ code {
     padding-top: 1em;
 }
 
-.notebox {
-    padding: 10px;
+blockquote {
+    padding: 5px;
+    display: block;
     font-style: italic;
-    background-color: rgba(255, 255, 204, 0.79);
     text-align: center;
-    /*border-left: 6px solid rgba(255, 234, 63, 0.6);*/
+    background-color: rgba(255, 234, 63, 0.2);
+    border-left: 6px solid rgba(255, 234, 63, 0.7);
 }
 
+blockquote > p {
+    margin: 0;
+}
 .centered {
-    text-align: center;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }

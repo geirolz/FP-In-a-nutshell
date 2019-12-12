@@ -13,8 +13,6 @@ The expression referential transparency is used in various domains, such as math
 
 ## Let's do some example
 
-### Yes, Maths! Again!
-
 Consider this example:
 
 x = 2 + (3 * 4)
@@ -29,7 +27,7 @@ We may also replace the expression 2 + 12 by another expression having the same 
 
 x = 14
 
-It's easy to reason in this terms! Referential transparency allow us to reason easily!
+**It's easy to reason in this terms! Referential transparency allow us to reason easily!**
 
 ---
 
@@ -54,10 +52,11 @@ In this example, the mult method is referentially transparent because any call t
 
 ```java
 int x = add(2, 12)
-
-//In the same way, add(2, 12) may be replaced with the corresponding return value, 14:
 int x = 14
 ```
+In the same way, add(2, 12) may be replaced with the corresponding return value, 14:
+
+---
 
 ### So, what's NOT Referentially Transparent
 
@@ -69,3 +68,5 @@ int add(int a, int b) {
     return result;
 }
 ```
+
+Replacing a call to the add method with the corresponding return value will change the result of the program, since the message will no longer be printed.
