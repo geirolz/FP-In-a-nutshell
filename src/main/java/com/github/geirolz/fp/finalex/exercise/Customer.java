@@ -11,10 +11,6 @@ public class Customer {
     }
 
     public Optional<Order> findOrderById(String orderId) {
-        for(int i=0; i<=orders.size(); i++)
-            if(orderId.equals(orders.get(i).getId()))
-                return Optional.of(orders.get(i));
-
-        return Optional.empty();
+        return this.orders.stream().filter(o -> orderId.equals(o.getId())).findFirst();
     }
 }

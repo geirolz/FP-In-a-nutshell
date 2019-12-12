@@ -1,21 +1,19 @@
 package com.github.geirolz.fp.functions.exercise;
 
 import java.util.List;
+import java.util.function.Function;
+import java.util.stream.Collectors;
 
 public class EvenAverageCalculator {
+    private static Function<List<Integer>, List<Integer>> filterEvenValues = nums ->
+            nums.stream().filter(n -> n%2 == 0).collect(Collectors.toList());
+
+    private static Function<List<Integer>, Double> computeAverage = nums ->
+            nums.stream().mapToDouble(v -> v).average().orElse(0);
 
     public static Double compute(List<Integer> nums) {
-        Double res = 0.0;
-        Integer counter = 0;
+        Function<List<Integer>, Double> operation = filterEvenValues.andThen(computeAverage);
 
-        for(int i=0; i<=nums.size(); i++) {
-            Integer num = nums.get(i);
-            if(num%2 != 0) {
-                res += num;
-                counter++;
-            }
-        }
-
-        return res / counter;
+        return operation.apply(nums);
     }
 }

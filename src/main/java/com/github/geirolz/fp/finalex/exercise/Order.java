@@ -17,13 +17,8 @@ public class Order {
     }
 
     public BigDecimal totalOrder() {
-        BigDecimal total = BigDecimal.ZERO;
-
-        for(int i=1; i<items.size(); i++) {
-            final BigDecimal totalItem = items.get(i).totalItem();
-            total = total.add(totalItem);
-        }
-
-        return total;
+        return items.stream()
+                .map(Item::totalItem)
+                .reduce(BigDecimal.ZERO, BigDecimal::add);
     }
 }

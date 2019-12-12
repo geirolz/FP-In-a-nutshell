@@ -13,9 +13,6 @@ public class Item {
     }
 
     public BigDecimal totalItem() {
-        if(discount.isPresent())
-            return unitPrice.subtract(discount.get());
-
-        return unitPrice;
+        return unitPrice.subtract(discount.orElse(BigDecimal.ZERO));
     }
 }
