@@ -14,6 +14,11 @@ It defines:
 
 ---
 
+## Programming paradigms
+
+Relations between languages --> paradigms --> concepts.
+
+
 <div class="centered">
     <img src="https://www.researchgate.net/profile/Peter_Van_Roy/publication/241111987/figure/fig1/AS:298670202343424@1448219933039/Languages-paradigms-and-concepts.png" />
 </div>
@@ -48,8 +53,8 @@ It's a formal system in mathematical logic for expressing computation based on f
 and application using variable binding and substitution. 
 **It's an universal model of computation that can be used to simulate any turing machine.**
 
-<div class="centered">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Greek_lc_lamda_thin.svg" />
+<div class="centered" style="width:5px;height:6px;">
+    <img src="https://www.greeksymbols.net/img/lambda-symbol.svg" />
 </div>
 
 ---
