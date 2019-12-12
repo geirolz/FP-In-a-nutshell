@@ -1,11 +1,14 @@
 package com.github.geirolz.fp.functions;
 
+import com.github.geirolz.fp.functions.exercise.EvenAverageCalculator;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 import java.util.List;
 
-class FunctionsComposabilityTest {
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+class EvenAverageCalculatorTest {
 
     /*
      * Exercise:
@@ -24,5 +27,6 @@ class FunctionsComposabilityTest {
         List<Integer> ls = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
 
         //Assert that result is equals to 6
+        assertEquals(6.0, EvenAverageCalculator.compute(ls));
     }
 }
