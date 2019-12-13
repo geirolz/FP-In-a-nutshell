@@ -54,7 +54,7 @@ In this example, the mult method is referentially transparent because any call t
 int x = add(2, 12)
 int x = 14
 ```
-In the same way, add(2, 12) may be replaced with the corresponding return value, 14:
+In the same way, add(2, 12) may be replaced with the corresponding return value, 14!
 
 ---
 
